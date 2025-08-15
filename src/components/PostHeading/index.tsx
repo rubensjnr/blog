@@ -15,7 +15,11 @@ function PostHeading({ children, url, as: Tag = "h2" }: PostHeadingProps) {
 
   return (
     <Tag className={headingClass[Tag]}>
-      <Link className="hover:opacity-95" href={`${url}`}>
+      <Link
+        title={children as string}
+        className="hover:opacity-95"
+        href={`${url}`}
+      >
         {children}
       </Link>
     </Tag>

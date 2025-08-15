@@ -1,6 +1,7 @@
 import { postRepository } from "@/repositories/post/json-post-repository";
 import PostCoverImage from "../PostCoverImage";
 import PostHeading from "../PostHeading";
+import { formateDateTime } from "@/utils/date-and-time";
 
 async function PostsList() {
   const posts = await postRepository.findAll();
@@ -18,14 +19,17 @@ async function PostsList() {
                 alt: post.title,
                 width: 1200,
                 height: 720,
+                title: post.title,
               }}
             />
             <div className="flex flex-col  justify-center gap-1 ">
               <time
                 dateTime={post.createdAt}
-                className="text-slate-500 text-sm/tight"
+                className="
+                 text-slate-500
+                   text-sm/tight"
               >
-                {post.createdAt}
+                {formateDateTime(post.createdAt)}
               </time>
               <PostHeading as="h2" url={`/post/${post.slug}`}>
                 {post.title}
