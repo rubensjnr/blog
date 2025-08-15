@@ -1,7 +1,7 @@
 {
-  "window.zoomLevel": 1.01,
+  "window.zoomLevel": 1,
   "breadcrumbs.enabled": false,
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "debug.console.fontSize": 14,
   "terminal.integrated.fontSize": 14,
   "editor.glyphMargin": false,
@@ -9,6 +9,13 @@
   "editor.lineNumbers": "off",
   "files.eol": "\n",
 
+  "editor.minimap.enabled": false,
+  "code-runner.ignoreSelection": true,
+  "code-runner.runInTerminal": true,
+
+  "code-runner.executorMap": {
+    "typescript": "clear; npx tsx"
+  },
   // 🛠 Formatação e Lint
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
